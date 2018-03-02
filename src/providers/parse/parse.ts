@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { Observable } from 'rxjs/Observable';
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
@@ -7,7 +10,10 @@ import { Parse } from 'parse';
 
 // Constants
 import { ENV } from '../../app/app.constant';
+<<<<<<< HEAD
 import { Subject } from 'rxjs/Subject';
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
 
 @Injectable()
 export class ParseProvider {
@@ -17,6 +23,7 @@ export class ParseProvider {
   constructor() {
     this.parseInitialize();
     console.log('Initiated Parse');
+<<<<<<< HEAD
 
 
   }
@@ -40,6 +47,10 @@ export class ParseProvider {
     })
 
   }
+=======
+  }
+
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
   public getGameScores(offset: number = 0, limit: number = 3): Promise<any> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

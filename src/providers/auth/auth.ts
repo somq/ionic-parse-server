@@ -18,7 +18,10 @@ export class User {
 export class AuthProvider {
   private parseAppId: string = ENV.parseAppId;
   private parseServerUrl: string = ENV.parseServerUrl;
+<<<<<<< HEAD
   private masterKey : string = ENV.masterKey;
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
 
   constructor() {
     this.parseInitialize();
@@ -35,7 +38,10 @@ export class AuthProvider {
         error: function (user, error) {
           // If the user inputs the email instead of the username
           var userQuery = new Parse.Query(Parse.User);
+<<<<<<< HEAD
           new Parse.
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
 
           userQuery.equalTo('email', username);
           userQuery.first().then(function (success) {
@@ -60,6 +66,7 @@ export class AuthProvider {
     });
   }
 
+<<<<<<< HEAD
   // public signup(username: string, password: string, email: string) {
   //   var user = new Parse.User();
   //   user.set('username', username);
@@ -75,6 +82,8 @@ export class AuthProvider {
   //     }
   //   });
   // }
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
   public signup(username: string, password: string, email: string): Observable<boolean> {
     return new Observable((observer) => {
       var user = new Parse.User();
@@ -84,12 +93,18 @@ export class AuthProvider {
 
       user.signUp(null, {
         success: (user) => {
+<<<<<<< HEAD
           console.log(`user: `, user);
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
           observer.next(true);
           observer.complete();
         },
         error: (user, error) => {
+<<<<<<< HEAD
           console.log(`user, error: `, user, error);
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
           observer.error(error);
           observer.complete();
         }
@@ -123,7 +138,10 @@ export class AuthProvider {
   private parseInitialize() {
     Parse.initialize(this.parseAppId);
     Parse.serverURL = this.parseServerUrl;
+<<<<<<< HEAD
     Parse.masterKey  = this.masterKey;
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
   }
 
 }

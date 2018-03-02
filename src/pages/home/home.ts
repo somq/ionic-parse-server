@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { ParseProvider } from './../../providers/parse/parse';
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
 import { Component } from '@angular/core';
 import { App, NavController } from 'ionic-angular';
 
 // Providers
+<<<<<<< HEAD
+=======
+import { ParseProvider } from '../../providers/parse/parse';
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
 import { AuthProvider } from '../../providers/auth/auth';
 
 // Pages
@@ -25,9 +32,12 @@ export class HomePage {
   }
 
   public listScores(): Promise<any> {
+<<<<<<< HEAD
     this.parseProvider.gameScores$().subscribe(res => {
       console.log('$$$$$$$$', res)
     })
+=======
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
     let offset = this.gameScores.length;
     let limit = 10;
     return this.parseProvider.getGameScores(offset, limit).then((result) => {

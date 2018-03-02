@@ -30,13 +30,21 @@ export class SignupPage {
     });
     loader.present();
 
+<<<<<<< HEAD
     this.authPvdr.signup(this.username, this.password, this.email)
     .subscribe((success) => {
+=======
+    this.authPvdr.signup(this.username, this.password, this.email).subscribe((success) => {
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
       this.navCtrl.setRoot(TabsPage);
       loader.dismissAll();
     }, (error) => {
       loader.dismissAll();
+<<<<<<< HEAD
     })
+=======
+    });
+>>>>>>> 71b7dbcaa725db26294e11e4a691f9f493e7f1ab
   }
 
 }
